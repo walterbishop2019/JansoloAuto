@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.program.autobuild" name="[COLOR blue]JanSolo[/COLOR][COLOR white]Wizard[/COLOR]" version="1.1.1" provider-name="JanSolo">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">JanSolo Wizard</summary>
+    <description lang="en">JanSolo Wizard los mejores wizard y ajustes a un click.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.program.JanSolowizardmod" name="[COLOR blue]JanSolo[/COLOR][COLOR white]Wizard[/COLOR]" version="1.1.1" provider-name="JanSoloAutobuild">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.pass" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">JanSolo Wizard</summary>
+    <description lang="en">JanSolo AUTOBUILD los mejores addons y ajustes a un click.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.program.super.jansolo" name="Super Favoritos Jansolo" version="1.1.1" provider-name="spoyser">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+    <import addon="script.module.metahandler" optional="true" />
+  </requires>
+
+
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio image executable</provides>
+  </extension>
+
+
+  <extension point="xbmc.service" library="service.py" start="startup" />
+
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Put all your favourites bits of all your favourites addons into one easy to use addon.</summary>
+    <description lang="en">Super Favoritos Jansolo is a better way of managing your Kodi Favourites.[CR][CR]Virtually any menu item within Kodi can be added to Super Favoritos Jansolo, even from addons that don't normally provide this feature.[CR][CR]Super Favoritos Jansolo allows you to better manage your Kodi favourites, including the creation of sub-folders, into which your Kodi favourites can then be copied or moved into.[CR][CR]This allows you to create you own custom addon with just the best bits of your favourite addons. Search your favourite addons, play your favourite music, read your favourite comic strips, select your favourite playlists, browse your favourite movies, listen to your favourite radio stations, watch your favourite cartoons, the possibilities are endless, all from within one easy to use addon.</description>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=192662</forum>
+    <website></website>
+    <source>https://github.com/spoyser/spoyser-repo/tree/master/plugin.program.super.jansolo</source>
+    <email>seanpoyser at gmail.com</email>
+
+    <news>
+1.0.59: 29th May 2017
+    - 'Now playing' text now defined by SF due to skin variations
+    </news>
+
+  </extension>
+
+
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+
+      <item library="capture.py">
+        <label>$ADDON[plugin.program.super.jansolo 30002]</label>
+        <visible>!IsEmpty(Window(Home).Property(SF_STD_CONTEXTMENU_ENABLED)) + !StringCompare(Container.PluginName,plugin.program.super.jansolo)</visible>
+      </item>
+
+      <item library="menu_addtofaves.py">
+        <label>$ADDON[plugin.program.super.jansolo 30047]</label>
+        <visible>!IsEmpty(Window(Home).Property(SF_STD_ADDTOFAVES_ENABLED)) + !StringCompare(Container.PluginName,plugin.program.super.jansolo)</visible>
+      </item>
+
+      <item library="menu_download.py">
+        <label>$ADDON[plugin.program.super.jansolo 30259]</label>
+        <visible>!IsEmpty(Window(Home).Property(SF_STD_DOWNLOAD_ENABLED)) + Player.IsInternetStream</visible>
+      </item>
+
+    </menu>
+  </extension>
+
+</addon>
+
+<addon
+  id="skin.xonfluence.jansolo"
+  version="999.0.10"
+  name="[COLOR orange]XonfluenceMOD[/COLOR]"
+  provider-name="Helly">
+  <requires>
+    <import addon="xbmc.gui" version="5.14.0"/>
+	  <import addon="script.favourites" version="7.1.1"/>
+	  <import addon="service.skin.widgets" version="0.0.33"/>
+	  <import addon="service.library.data.provider" version="0.3.2"/>
+	  <import addon="script.randomandlastitems" version="2.2.2"/>
+	  <import addon="plugin.program.super.jansolo" version="1.1.1"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    debugging="false"
+    effectslowdown="1.0">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.repository" name="Palantir Repo">
+        <info>https://raw.githubusercontent.com/walterbishop2019/jansolo/master/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/walterbishop2019/jansolo/master/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/walterbishop2019/jansolo/master/zips/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Skins und Skin Themen by Guidos Skinbase.</summary>
+		<summary lang="en_GB">Skins and Skin Themen by Guidos Skinbase.</summary>
+		<description lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </description>
+		<description lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</description>
+		<platform>all</platform>
+		<news lang="de_DE">Guidos Skinbase Repo. Die Gröste Skinbase der Welt mit unzähligen Skin Mods  und Skin Themen aus der ganzen Welt. Ständig Erweitert und Verbessert, so sollte für jeden was dabei sein Viel Spass. </news>
+		<news lang="en_GB">Guido's Skinbase Repo. The world's largest skinbase with countless skin mods and skin themes from around the world. Constantly extended and improved, so there should be something for everyone Have fun.</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+		</assets>
+	</extension>
+	<size>26212314</size>
+</addon>
+</addons>
