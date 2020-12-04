@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.jansolowizard" name="[COLOR DarkMagenta]Jansolo[/COLOR] [COLOR red]Wizard[/COLOR]" version="2.2.2" provider-name="[COLOR DarkMagenta]Jansolo[/COLOR]">
+<addon id="plugin.program.jansolowizard" name="[COLOR DarkMagenta]Jansolo[/COLOR] [COLOR red]Wizard[/COLOR]" version="2.2.3" provider-name="[COLOR DarkMagenta]Jansolo[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
